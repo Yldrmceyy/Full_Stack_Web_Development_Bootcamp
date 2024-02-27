@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        // Declare variable and prompting user input
+        //Define the variable and redirect user input
         Scanner input = new Scanner(System.in);
         System.out.print("Please enter n value: ");
         int n = input.nextInt();
