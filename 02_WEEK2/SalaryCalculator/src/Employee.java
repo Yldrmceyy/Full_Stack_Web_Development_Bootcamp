@@ -2,14 +2,14 @@ public class Employee {
     // Variables
     String name;
     double salary;
-    int workHouse;
+    int workHours;
     int hireYear;
 
     //Constructor method
-    public Employee(String name, double salary, int workHouse, int hireYear) {
+    public Employee(String name, double salary, int workHours, int hireYear) {
         this.name = name;
         this.salary = salary;
-        this.workHouse = workHouse;
+        this.workHours = workHours;
         this.hireYear = hireYear;
     }
 
@@ -27,10 +27,10 @@ public class Employee {
     }
 
     // Method to calculate bonus
-    public static double bonus(int workHouse) {
+    public static double bonus(int workHours) {
         double bonus = 0;
-        if (workHouse > 40) {
-            bonus = (workHouse - 40) * 30;
+        if (workHours > 40) {
+            bonus = (workHours - 40) * 30;
         }
         return bonus;
     }
@@ -53,13 +53,13 @@ public class Employee {
     public String toString() {
         return  "\n Name: " + name +
                 "\n Salary: " + salary +
-                "\n Work Hours: " + workHouse +
+                "\n Work Hours: " + workHours +
                 "\n Hire Year: " + hireYear +
                 "\n Tax: " + tax(salary) +
                 "\n Raise Salary: " + raiseSalary(salary, hireYear) +
-                "\n Bonus:" + bonus(workHouse) +
-                "\n Salary with Tax and Bonus: " + (salary - tax(salary) + bonus(workHouse) +
-                "\n Total Salary: " + (salary - tax(salary) + raiseSalary(salary, hireYear) + bonus(workHouse)+
+                "\n Bonus:" + bonus(workHours) +
+                "\n Salary with Tax and Bonus: " + (salary - tax(salary) + bonus(workHours) +
+                "\n Total Salary: " + (salary - tax(salary) + raiseSalary(salary, hireYear) + bonus(workHours)+
                 "\n ======================== "));
     }
 }
